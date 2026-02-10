@@ -63,8 +63,25 @@
     <script>
     alert("ページが開きました！")
   </script>
+    <button onclick="showQuote()">おみくじ</button>
+
+  <p id="quote">今日の運勢</p>
+
+  <script>
+    const quotes = [
+      "大吉",
+      "吉",
+      "小吉",
+      "凶"
+    ];
+    function showQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[randomIndex];
+    }
+  </script>
 </body>
 
 </html>
+
 
 
